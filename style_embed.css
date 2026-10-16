@@ -1,0 +1,10 @@
+/* Phần 3: External-style (viết trong file .css riêng) */
+.external-title {
+    color: #8e44ad; /* Màu tím */
+    font-size: 24px;
+}
+
+.external-desc {
+    color: #16a085; /* Màu xanh ngọc */
+    font-size: 16px;
+}

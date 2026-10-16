@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành nhúng CSS vào trang HTML</title>
+
+    <!-- PHẦN 3: EXTERNAL-STYLE (Liên kết file CSS bên ngoài) -->
+    <link rel="stylesheet" href="style_embed.css">
+
+    <!-- PHẦN 2: INTERNAL-STYLE (Viết CSS bên trong thẻ <style> ở phần <head>) -->
+    <style>
+        .internal-title {
+            color: #d35400; /* Màu cam đất */
+            font-size: 24px;
+        }
+
+        .internal-desc {
+            color: #2980b9; /* Màu xanh dương */
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PHẦN 1: INLINE-STYLE (Sử dụng thuộc tính style trực tiếp trên thẻ) -->
+    <section>
+        <h2>Phần 1: Thay đổi màu sắc sử dụng Inline-style</h2>
+        <h1 style="color: red;">Tiêu đề sử dụng Inline-style (Màu đỏ)</h1>
+        <p style="color: blue;">Đoạn văn sử dụng Inline-style (Màu xanh dương).</p>
+    </section>
+
+    <hr>
+
+    <!-- PHẦN 2: INTERNAL-STYLE (Áp dụng class định nghĩa trong thẻ <style>) -->
+    <section>
+        <h2>Phần 2: Thay đổi màu sắc sử dụng Internal-style</h2>
+        <h1 class="internal-title">Tiêu đề sử dụng Internal-style (Màu cam)</h1>
+        <p class="internal-desc">Đoạn văn sử dụng Internal-style (Màu xanh nước biển).</p>
+    </section>
+
+    <hr>
+
+    <!-- PHẦN 3: EXTERNAL-STYLE (Áp dụng class từ file style_embed.css) -->
+    <section>
+        <h2>Phần 3: Thay đổi màu sắc sử dụng External-style</h2>
+        <h1 class="external-title">Tiêu đề sử dụng External-style (Màu tím)</h1>
+        <p class="external-desc">Đoạn văn sử dụng External-style (Màu xanh ngọc).</p>
+    </section>
+
+</body>
+</html>
