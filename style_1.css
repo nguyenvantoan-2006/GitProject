@@ -1,0 +1,39 @@
+/* Thiết lập chung cho trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Các thuộc tính chung cho cả 3 thẻ card */
+.card {
+    width: 280px;
+    height: 150px;
+    padding: 20px;
+    border: 5px solid #3498db;
+    margin: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    display: inline-block; /* Giúp các thẻ có thể xếp ngang cạnh nhau nếu đủ chỗ */
+    vertical-align: top;
+}
+
+/* Thẻ thứ nhất: content-box, nền xanh lá cây */
+.card:nth-child(1) {
+    box-sizing: content-box;
+    background-color: #2ecc71;
+}
+
+/* Thẻ thứ hai: border-box, nền vàng, chữ tối */
+.card:nth-child(2) {
+    box-sizing: border-box;
+    background-color: #f1c40f;
+    color: #333333;
+}
+
+/* Thẻ thứ ba: border-box, nền đỏ */
+.card:nth-child(3) {
+    box-sizing: border-box;
+    background-color: #e74c3c;
+}
