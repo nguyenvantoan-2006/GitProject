@@ -3,33 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sử dụng danh sách trong HTML</title>
+    <title>Tạo liên kết trong HTML</title>
 </head>
 <body>
 
-    <!-- Tiêu đề h1 -->
-    <h1>Những món ăn yêu thích của tôi</h1>
+    <!-- Tiêu đề chính -->
+    <h1>Liên kết yêu thích của tôi</h1>
 
-    <!-- Danh sách không có thứ tự (ul) gồm ít nhất 5 món ăn -->
+    <!-- Danh sách không có thứ tự chứa ít nhất 3 liên kết -->
     <ul>
-        <li>Phở bò</li>
-        <li>Bún chả</li>
-        <li>Cơm tấm</li>
-        <li>Bánh mì pate</li>
-        <li>Nem rán</li>
+        <li>
+            <!-- Liên kết mở tab mới (target="_blank") -->
+            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google (Mở tab mới)</a>
+        </li>
+        <li>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </li>
+        <li>
+            <a href="https://codegym.vn" target="_blank" rel="noopener noreferrer">CodeGym Việt Nam</a>
+        </li>
+        <li>
+            <!-- Liên kết đến file HTML khác trong cùng thư mục -->
+            <a href="about.html">Xem trang Giới thiệu (about.html)</a>
+        </li>
+        <li>
+            <!-- Liên kết gửi email qua mailto: -->
+            <a href="mailto:example@gmail.com">Gửi thư cho tôi (mailto)</a>
+        </li>
     </ul>
-
-    <!-- Tiêu đề h2 -->
-    <h2>Các bước chuẩn bị cho một chuyến du lịch</h2>
-
-    <!-- Danh sách có thứ tự (ol) gồm ít nhất 5 bước -->
-    <ol>
-        <li>Chọn địa điểm và thời gian cho chuyến đi</li>
-        <li>Lên ngân sách dự kiến chi tiết</li>
-        <li>Đặt trước vé máy bay/tàu xe và phòng khách sạn</li>
-        <li>Lập lịch trình các điểm tham quan và ăn uống</li>
-        <li>Chuẩn bị hành lý, giấy tờ tùy thân và thuốc men cá nhân</li>
-    </ol>
 
 </body>
 </html>
