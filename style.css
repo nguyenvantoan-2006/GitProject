@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    padding: 20px 30px;
+    background-color: #f8fafc;
+    color: #333;
+}
+
+h2 {
+    color: #1e3a8a;
+    border-bottom: 2px solid #93c5fd;
+    padding-bottom: 6px;
+    margin-top: 24px;
+}
+
+/* 2. Danh sách hình vuông */
+.list-square {
+    list-style-type: square;
+}
+
+/* 3. Danh sách số La Mã in hoa */
+.list-roman {
+    list-style-type: upper-roman;
+}
+
+/* 4. Danh sách sử dụng icon/hình ảnh */
+.list-image {
+    list-style-image: url("https://cdn-icons-png.flaticon.com/128/1828/1828640.png");
+}
+
+/* 5. Vị trí dấu đánh dấu: outside và inside */
+.list-outside {
+    list-style-position: outside;
+    background-color: #e2e8f0;
+    padding: 15px 30px;
+}
+
+.list-inside {
+    list-style-position: inside;
+    background-color: #f1f5f9;
+    padding: 15px 30px;
+}
+
+/* 6. Thuộc tính rút gọn list-style: [type] [position] */
+.list-shorthand {
+    list-style: circle inside;
+}
+
+/* 7. Danh sách có màu nền, màu chữ, padding, margin */
+.list-styled-colors {
+    background-color: #0f172a;
+    padding: 20px 25px;
+    border-radius: 8px;
+    list-style-type: disc;
+}
+
+.list-styled-colors li {
+    color: #38bdf8;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* 8. Bài tập tổng hợp: Lộ trình học lập trình Web */
+.roadmap-list {
+    list-style: decimal inside;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 20px 25px;
+    max-width: 450px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.roadmap-list li {
+    color: #1e293b;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    background-color: #f8fafc;
+    border-left: 4px solid #2563eb;
+    font-weight: 600;
+}
