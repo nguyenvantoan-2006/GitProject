@@ -1,0 +1,57 @@
+/* 1. Thiết lập màu nền cho toàn bộ trang web */
+body {
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    color: #333333;
+}
+
+/* Định dạng tiêu đề chính */
+h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+/* Định dạng đoạn văn mô tả */
+.intro-text {
+    text-align: center;
+    font-size: 16px;
+    color: #4b5563;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+/* 2 & 3. Thêm ảnh nền và căn giữa nội dung cho khối div */
+.featured-box {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Kích thước và căn lề */
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    /* Căn giữa toàn bộ nội dung trong khối */
+    text-align: center;
+    color: #ffffff;
+}
+
+.featured-box h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.featured-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 550px;
+    margin: 0 auto;
+}
