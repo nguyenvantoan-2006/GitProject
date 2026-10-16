@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng Box Model 3</title>
+    <style>
+        /* Khung chứa bên ngoài */
+        #demo {
+            width: 350px;
+            display: flex;
+            float: left;
+            border: 6px solid black;
+            border-radius: 6%;
+            padding: 10px 0;
+        }
+
+        /* Khối con 1 */
+        .d1 {
+            margin-left: 20px;
+            width: 150px;
+            height: 80px;
+            box-shadow: 0 0 0 4px mediumslateblue;
+            box-sizing: border-box;
+            border-radius: 36%;
+        }
+
+        /* Khối con 2 */
+        .d2 {
+            width: 150px;
+            height: 80px;
+            padding: 30px;
+            box-shadow: 0 0 0 4px darkred;
+            box-sizing: border-box;
+            border-radius: 36%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="demo">
+        <div class="d1"></div>
+        <div class="d2"></div>
+    </div>
+
+</body>
+</html>
