@@ -1,0 +1,73 @@
+/* 1. Element Selector (bộ chọn phần tử): Đổi màu nền trang và font chữ */
+body {
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    color: #333333;
+}
+
+/* 2. Grouping Selector (bộ chọn gom nhóm) & Element Selector: Căn giữa tiêu đề */
+h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+/* 3. Class Selector (bộ chọn class): Định dạng đoạn văn giới thiệu */
+.bio-desc {
+    text-align: center;
+    font-size: 16px;
+    color: #475569;
+    margin-bottom: 25px;
+}
+
+/* 4. ID Selector (bộ chọn id): Định dạng khung danh sách sở thích */
+#hobbies-list {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    max-width: 350px;
+    margin: 0 auto 25px auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Định dạng các mục sở thích với màu sắc khác nhau qua class */
+.hobby-coding {
+    color: #0284c7;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.hobby-music {
+    color: #16a34a;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.hobby-travel {
+    color: #ea580c;
+    font-weight: bold;
+}
+
+/* 5. Định dạng nút bấm căn giữa */
+.button-container {
+    text-align: center;
+}
+
+#my-button {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* 6. Pseudo-class Selector (bộ chọn giả lập hover): Hiệu ứng khi rê chuột vào nút */
+#my-button:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.05);
+}
