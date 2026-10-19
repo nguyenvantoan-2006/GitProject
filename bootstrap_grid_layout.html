@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiết kế Trang Web với Bootstrap Grid System</title>
+    <!-- Nhúng Bootstrap 5 CSS qua CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <!-- 1. HEADER -->
+    <header class="bg-primary text-white text-center py-4 shadow-sm">
+        <div class="container">
+            <h1 class="display-6 fw-bold mb-1">Cổng Thông Tin Công Nghệ</h1>
+            <p class="mb-0 text-white-50">Thiết kế bố cục chuẩn Responsive với Bootstrap Grid System</p>
+        </div>
+    </header>
+
+    <!-- 2. NAVBAR (Có Dropdown & Toggler) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="#">TechPortal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tin tức</a>
+                    </li>
+                    <!-- Menu thả xuống Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Khóa học
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Lập trình Web Frontend</a></li>
+                            <li><a class="dropdown-item" href="#">Bootstrap 5 Chuyên sâu</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Lập trình Backend</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Liên hệ</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control form-control-sm me-2" type="search" placeholder="Tìm kiếm bài viết..." aria-label="Search">
+                    <button class="btn btn-outline-info btn-sm" type="submit">Tìm</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. MAIN CONTENT & SIDEBAR (BOOTSTRAP GRID SYSTEM) -->
+    <div class="container my-4 flex-grow-1">
+        <div class="row g-4">
+            <!-- Cột Nội dung chính: 8 phần trên màn hình lớn, 12 phần trên mobile -->
+            <main class="col-12 col-lg-8">
+                <div class="card border-0 shadow-sm p-4 mb-4">
+                    <h2 class="h3 fw-bold text-primary mb-3">Ứng dụng Bootstrap Grid System trong dàn trang Responsive</h2>
+                    <p class="text-secondary lead fs-6">
+                        Hệ thống lưới (Grid System) của Bootstrap sử dụng một loạt các container, hàng (row) và cột (column) để định dạng và căn chỉnh nội dung. Nó được xây dựng dựa trên công nghệ Flexbox và hoàn toàn tương thích với các thiết bị di động.
+                    </p>
+                    <p class="text-muted">
+                        Trong bài tập này, khu vực chính sử dụng lớp <code>col-12 col-lg-8</code>, nghĩa là trên màn hình máy tính (màn hình lớn &ge; 992px), bài viết sẽ chiếm 8/12 phần của chiều rộng hàng. Khi người dùng thu nhỏ màn hình về kích thước điện thoại (&lt; 992px), phần tử sẽ tự động mở rộng trọn vẹn 12/12 phần để người dùng dễ đọc nhất.
+                    </p>
+                    <hr>
+                    <h3 class="h5 fw-bold text-dark mt-3">Các thành phần cốt lõi:</h3>
+                    <ul class="text-muted mb-0">
+                        <li><strong>Containers:</strong> Cung cấp một phương tiện để chứa, đệm và căn giữa nội dung trong một thiết bị hoặc khung nhìn cụ thể.</li>
+                        <li><strong>Rows:</strong> Các hàng bọc ngoài các cột để duy trì khoảng cách đệm âm thích hợp (gutters).</li>
+                        <li><strong>Columns:</strong> Vùng chứa trực tiếp của nội dung, được chia thành 12 cột linh hoạt.</li>
+                    </ul>
+                </div>
+            </main>
+
+            <!-- Cột Sidebar: 4 phần trên màn hình lớn, 12 phần trên mobile -->
+            <aside class="col-12 col-lg-4">
+                <!-- Widget Chuyên mục nổi bật -->
+                <div class="card border-0 shadow-sm p-3 mb-4">
+                    <h3 class="h5 fw-bold text-dark border-bottom pb-2 mb-3">Chuyên mục nổi bật</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            HTML5 &amp; CSS3 Cơ bản
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            CSS Grid &amp; Flexbox
+                            <span class="badge bg-primary rounded-pill">8</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            Bootstrap 5 Framework
+                            <span class="badge bg-primary rounded-pill">12</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            JavaScript Hiện đại
+                            <span class="badge bg-primary rounded-pill">20</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Widget Thông báo -->
+                <div class="card border-0 shadow-sm p-3 bg-white">
+                    <h3 class="h5 fw-bold text-dark border-bottom pb-2 mb-3">Thông báo khóa học</h3>
+                    <p class="text-muted small mb-2">Đợt tuyển sinh lập trình viên Web kỳ mới bắt đầu từ đầu tháng sau. Đăng ký ngay để nhận ưu đãi.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm w-100">Xem lịch khai giảng</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- 4. FOOTER -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            <p class="mb-0 text-secondary small">&copy; 2026 TechPortal. All rights reserved. Xây dựng bằng Bootstrap 5 Grid System.</p>
+        </div>
+    </footer>
+
+    <!-- Nhúng Bootstrap 5 JS Bundle qua CDN (hỗ trợ Dropdown và Toggler) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
