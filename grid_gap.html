@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS Grid Gap</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 30px;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        h2 {
+            margin-bottom: 6px;
+            color: #0f172a;
+        }
+
+        p.desc {
+            margin-bottom: 16px;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .section-box {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .grid-item {
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* VÍ DỤ 1: KHOẢNG CÁCH HÀNG VÀ CỘT BẰNG NHAU (20px) */
+        .grid-example-1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px; /* Hàng cách nhau 20px, cột cách nhau 20px */
+        }
+
+        .grid-example-1 .grid-item {
+            background-color: lightblue;
+            color: #0369a1;
+        }
+
+        /* VÍ DỤ 2: KHOẢNG CÁCH HÀNG VÀ CỘT KHÁC NHAU (Hàng 30px, Cột 10px) */
+        .grid-example-2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px 10px; /* 30px là grid-row-gap, 10px là grid-column-gap */
+        }
+
+        .grid-example-2 .grid-item {
+            background-color: lightgreen;
+            color: #15803d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- VÍ DỤ 1 -->
+    <div class="section-box">
+        <h2>Ví dụ 1: Thiết lập khoảng cách hàng và cột bằng nhau</h2>
+        <p class="desc">Cấu hình: <code>grid-template-columns: repeat(2, 1fr); grid-gap: 20px;</code> (Khoảng cách hàng và cột đều là 20px)</p>
+        <div class="grid-example-1">
+            <div class="grid-item">Ô 1</div>
+            <div class="grid-item">Ô 2</div>
+            <div class="grid-item">Ô 3</div>
+            <div class="grid-item">Ô 4</div>
+        </div>
+    </div>
+
+    <!-- VÍ DỤ 2 -->
+    <div class="section-box">
+        <h2>Ví dụ 2: Thiết lập khoảng cách hàng và cột khác nhau</h2>
+        <p class="desc">Cấu hình: <code>grid-template-columns: repeat(3, 1fr); grid-gap: 30px 10px;</code> (Khoảng cách hàng: 30px, khoảng cách cột: 10px)</p>
+        <div class="grid-example-2">
+            <div class="grid-item">Ô 1</div>
+            <div class="grid-item">Ô 2</div>
+            <div class="grid-item">Ô 3</div>
+            <div class="grid-item">Ô 4</div>
+            <div class="grid-item">Ô 5</div>
+            <div class="grid-item">Ô 6</div>
+        </div>
+    </div>
+
+</body>
+</html>
