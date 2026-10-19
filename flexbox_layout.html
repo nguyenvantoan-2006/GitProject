@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng bố cục trang web với CSS Flexbox</title>
+    <!-- Liên kết file CSS -->
+    <link rel="stylesheet" href="style_flexbox.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. Header -->
+        <header class="header">
+            Header - Website Bố Cục CSS Flexbox
+        </header>
+
+        <!-- 2. Navigation -->
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Khóa học</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- 3. Main Container (Content + Sidebar) -->
+        <div class="main-container">
+            <main class="content">
+                <h2>Nội dung chính (Main Content)</h2>
+                <p>Trang web này được xây dựng bố cục dựa trên mô hình <strong>CSS Flexbox</strong>. Cấu trúc tổng thể sử dụng <code>flex-direction: column</code> để xếp tầng Header, Navigation, Main Container và Footer.</p>
+                <p>Bên trong <code>.main-container</code>, chúng ta áp dụng <code>display: flex</code> với tỷ lệ <code>flex: 3</code> cho nội dung chính và <code>flex: 1</code> cho sidebar, giúp chia tỷ lệ không gian 3:1 một cách tự động và linh hoạt.</p>
+            </main>
+
+            <aside class="sidebar">
+                <h3>Sidebar Tiện ích</h3>
+                <ul>
+                    <li>Tin tức công nghệ mới</li>
+                    <li>Lộ trình lập trình Web</li>
+                    <li>Tài liệu Flexbox &amp; Grid</li>
+                    <li>Sự kiện trực tuyến 2026</li>
+                </ul>
+            </aside>
+        </div>
+
+        <!-- 4. Footer -->
+        <footer class="footer">
+            &copy; 2026 Bản quyền thuộc về Web Developer Practice. Bố cục chuẩn CSS Flexbox Responsive.
+        </footer>
+    </div>
+
+</body>
+</html>
