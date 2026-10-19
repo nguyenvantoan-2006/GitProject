@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8fafc;
+}
+
+/* Thanh điều hướng */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e293b;
+    padding: 15px 25px;
+    color: #ffffff;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #38bdf8;
+    letter-spacing: 0.5px;
+}
+
+/* Danh sách liên kết trên Desktop */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f1f5f9;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* Biểu tượng hamburger (mặc định ẩn trên màn hình lớn) */
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s ease;
+}
+
+.menu-icon:hover {
+    color: #38bdf8;
+}
+
+/* Responsive cho màn hình Mobile (dưới 768px) */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Hiện icon 3 gạch */
+    }
+
+    .nav-links {
+        display: none; /* Ẩn menu ngang trên mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Nằm sát mép dưới navbar */
+        left: 0;
+        width: 100%;
+        background-color: #1e293b;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid #334155;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Lớp active được toggle bằng JavaScript */
+    .nav-links.active {
+        display: flex;
+    }
+}
