@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS Flex Flow</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 30px;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        h2 {
+            margin-bottom: 6px;
+            color: #0f172a;
+        }
+
+        p.desc {
+            margin-bottom: 16px;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .section-box {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        /* 1. VÍ DỤ 1: ROW NOWRAP */
+        .container-1 {
+            display: flex;
+            flex-flow: row nowrap; /* Sắp xếp theo hàng ngang từ trái sang phải, không ngắt dòng */
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .container-1 > div {
+            background-color: #007bff;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* 2. VÍ DỤ 2: ROW-REVERSE NOWRAP */
+        .container-2 {
+            display: flex;
+            flex-flow: row-reverse nowrap; /* Sắp xếp theo hàng ngang đảo ngược từ phải sang trái */
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .container-2 > div {
+            background-color: #28a745;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- VÍ DỤ 1 -->
+    <div class="section-box">
+        <h2>1. flex-flow: row nowrap (Mặc định)</h2>
+        <p class="desc">Các phần tử sắp xếp từ trái qua phải theo hướng đọc chuẩn (1 &rarr; 2 &rarr; 3) và không xuống dòng.</p>
+        <div class="container-1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </div>
+
+    <!-- VÍ DỤ 2 -->
+    <div class="section-box">
+        <h2>2. flex-flow: row-reverse nowrap</h2>
+        <p class="desc">Các phần tử sắp xếp đảo ngược từ phải sang trái (1 nằm ngoài cùng bên phải, tiếp theo là 2 và 3).</p>
+        <div class="container-2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </div>
+
+</body>
+</html>
