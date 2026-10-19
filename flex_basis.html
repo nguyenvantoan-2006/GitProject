@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS Flex Basis</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 30px;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        h2 {
+            margin-bottom: 6px;
+            color: #0f172a;
+        }
+
+        p.desc {
+            margin-bottom: 15px;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .section-box {
+            background: #ffffff;
+            padding: 20px 24px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .item {
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* 1. VÍ DỤ 1: ĐƠN VỊ PX (Main axis = row) */
+        .container-px {
+            display: flex;
+            gap: 10px;
+            background-color: #f1f5f9;
+            padding: 12px;
+            border-radius: 6px;
+        }
+        .container-px .item {
+            background-color: lightblue;
+            color: #0369a1;
+        }
+        .container-px .item1 { flex-basis: 200px; }
+        .container-px .item2 { flex-basis: 100px; }
+        .container-px .item3 { flex-basis: 150px; }
+
+        /* 2. VÍ DỤ 2: FLEX-DIRECTION: COLUMN (Main axis = chiều dọc) */
+        .container-col {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 400px;
+            background-color: #f1f5f9;
+            padding: 12px;
+            border-radius: 6px;
+        }
+        .container-col .item {
+            flex-basis: 100px;
+            background-color: lightgreen;
+            color: #15803d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 3. VÍ DỤ 3: ĐƠN VỊ PHẦN TRĂM % */
+        .container-percent {
+            display: flex;
+            gap: 10px;
+            background-color: #f1f5f9;
+            padding: 12px;
+            border-radius: 6px;
+        }
+        .container-percent .item {
+            flex-basis: 50%;
+            background-color: lightcoral;
+            color: #7f1d1d;
+        }
+
+        /* 4. VÍ DỤ 4: KẾT HỢP FLEX-BASIS VÀ FLEX-GROW */
+        .container-grow {
+            display: flex;
+            width: 650px;
+            gap: 10px;
+            background-color: #f1f5f9;
+            padding: 12px;
+            border-radius: 6px;
+        }
+        .container-grow .item {
+            background-color: #e0e7ff;
+            color: #3730a3;
+        }
+        .container-grow .item1 { flex-basis: 100px; flex-grow: 1; }
+        .container-grow .item2 { flex-basis: 100px; flex-grow: 2; }
+        .container-grow .item3 { flex-basis: 100px; flex-grow: 1; }
+    </style>
+</head>
+<body>
+
+    <!-- 1. VÍ DỤ 1: ĐƠN VỊ PX -->
+    <div class="section-box">
+        <h2>1. Sử dụng flex-basis với đơn vị px (flex-direction: row)</h2>
+        <p class="desc">Kích thước ban đầu theo chiều ngang: Item 1 (200px), Item 2 (100px), Item 3 (150px).</p>
+        <div class="container-px">
+            <div class="item item1">Item 1 (200px)</div>
+            <div class="item item2">Item 2 (100px)</div>
+            <div class="item item3">Item 3 (150px)</div>
+        </div>
+    </div>
+
+    <!-- 2. VÍ DỤ 2: THEO TRỤC DỌC (COLUMN) -->
+    <div class="section-box">
+        <h2>2. flex-basis thay đổi theo flex-direction: column</h2>
+        <p class="desc">Trục chính chuyển sang chiều dọc: Mỗi Item có chiều cao cơ sở ban đầu là 100px.</p>
+        <div class="container-col">
+            <div class="item">Item 1 (Cao 100px)</div>
+            <div class="item">Item 2 (Cao 100px)</div>
+            <div class="item">Item 3 (Cao 100px)</div>
+        </div>
+    </div>
+
+    <!-- 3. VÍ DỤ 3: ĐƠN VỊ PHẦN TRĂM -->
+    <div class="section-box">
+        <h2>3. Sử dụng flex-basis với đơn vị phần trăm (%)</h2>
+        <p class="desc">Mỗi Item nhận kích thước cơ sở bằng 50% theo chiều ngang trục chính.</p>
+        <div class="container-percent">
+            <div class="item">Item 1 (50%)</div>
+            <div class="item">Item 2 (50%)</div>
+        </div>
+    </div>
+
+    <!-- 4. VÍ DỤ 4: KẾT HỢP VỚI FLEX-GROW -->
+    <div class="section-box">
+        <h2>4. Kết hợp flex-basis với flex-grow</h2>
+        <p class="desc">Kích thước cơ sở ban đầu 100px mỗi ô. Phần diện tích dư thừa còn lại được chia theo tỷ lệ 1 : 2 : 1.</p>
+        <div class="container-grow">
+            <div class="item item1">Item 1 (grow: 1)</div>
+            <div class="item item2">Item 2 (grow: 2)</div>
+            <div class="item item3">Item 3 (grow: 1)</div>
+        </div>
+    </div>
+
+</body>
+</html>
