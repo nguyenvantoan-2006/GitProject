@@ -1,0 +1,16 @@
+@use "variables" as vars;
+
+@mixin grid-column {
+  width: vars.$column-width;
+  height: 100%;
+  float: left;
+}
+
+@mixin guide-border($sides: right) {
+  @if $sides == both {
+    border-right: 1px solid vars.$color-grid-guide;
+    border-left: 1px solid vars.$color-grid-guide;
+  } @else {
+    border-right: 1px solid vars.$color-grid-guide;
+  }
+}
