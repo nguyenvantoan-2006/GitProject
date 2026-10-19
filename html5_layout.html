@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo layout với các thẻ HTML5 và CSS</title>
+    <style>
+        /* Reset CSS mặc định */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        /* Khung bọc toàn bộ trang web */
+        .wrapper {
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* 1. Thẻ <header>: Banner / Tiêu đề đầu trang */
+        header {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        /* 2. Thẻ <nav>: Thanh điều hướng menu */
+        nav {
+            background-color: #0f172a;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 14px 10px;
+            color: #f8fafc;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Khung chứa nội dung chính và sidebar */
+        .main-container {
+            display: flex;
+            gap: 20px;
+            padding: 24px;
+        }
+
+        /* 3. Thẻ <section>: Khu vực nội dung bài viết chính */
+        section {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* 4. Thẻ <article>: Từng bài viết độc lập */
+        article {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        article h2 {
+            color: #0284c7;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        article p {
+            color: #475569;
+            font-size: 15px;
+        }
+
+        /* 5. Thẻ <aside>: Cột bên lề / Sidebar */
+        aside {
+            flex: 1;
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            height: fit-content;
+        }
+
+        aside h3 {
+            color: #1e293b;
+            font-size: 18px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 6px;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside ul li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #cbd5e1;
+            font-size: 14px;
+        }
+
+        aside ul li a {
+            color: #334155;
+            text-decoration: none;
+        }
+
+        aside ul li a:hover {
+            color: #0284c7;
+        }
+
+        /* 6. Thẻ <footer>: Chân trang */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            text-align: center;
+            padding: 16px 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- 1. HEADER -->
+        <header>
+            <h1>Trang Tin Công Nghệ &amp; Đời Sống</h1>
+            <p>Bố cục trang web chuẩn với các thẻ ngữ nghĩa HTML5</p>
+        </header>
+
+        <!-- 2. NAV -->
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Công nghệ</a></li>
+                <li><a href="#">Khóa học</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Khung bố cục Section + Aside -->
+        <div class="main-container">
+            <!-- 3. SECTION -->
+            <section>
+                <!-- 4. ARTICLE 1 -->
+                <article>
+                    <h2>Tìm hiểu về các thẻ ngữ nghĩa trong HTML5</h2>
+                    <p>Các thẻ HTML5 như header, nav, section, article, aside, footer giúp mã nguồn có cấu trúc rõ ràng, tăng tính đọc hiểu cho lập trình viên và tối ưu hóa công cụ tìm kiếm (SEO) tốt hơn so với việc chỉ lạm dụng thẻ div.</p>
+                </article>
+
+                <!-- 4. ARTICLE 2 -->
+                <article>
+                    <h2>Ứng dụng CSS Flexbox trong dàn trang</h2>
+                    <p>Flexbox giúp việc căn chỉnh phân vùng section và aside trở nên trực quan, đơn giản mà không cần dùng đến các thuộc tính float hay xử lý tràn lề (clearfix) phức tạp.</p>
+                </article>
+            </section>
+
+            <!-- 5. ASIDE -->
+            <aside>
+                <h3>Chuyên mục nổi bật</h3>
+                <ul>
+                    <li><a href="#">Lập trình Web Frontend</a></li>
+                    <li><a href="#">CSS Flexbox &amp; Grid</a></li>
+                    <li><a href="#">Kiến thức HTML5 nâng cao</a></li>
+                    <li><a href="#">Tài liệu Git &amp; GitHub</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <!-- 6. FOOTER -->
+        <footer>
+            <p>&copy; 2026 Bản quyền thuộc về Trang Tin Công Nghệ. Xây dựng bằng HTML5 &amp; CSS.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
