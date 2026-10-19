@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành tạo Menu Dọc Dropdown</title>
+    <style>
+        /* 1. Thiết lập chung để tránh sai lệch hiển thị giữa các trình duyệt */
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            padding: 40px;
+        }
+
+        /* Khung bao ngoài menu */
+        #menu {
+            width: 140px;
+        }
+
+        /* 2. Định dạng các phần tử trong danh sách (li) */
+        #menu ul {
+            list-style: none;
+        }
+
+        #menu li {
+            position: relative; /* Giúp menu con định vị tọa độ bám theo menu cha */
+            width: 140px;
+            height: 35px;
+            line-height: 35px;
+            background-color: #1a1a1a;
+            padding: 0 16px;
+            cursor: pointer;
+            border-bottom: 1px solid #333333;
+            transition: background-color 0.2s;
+        }
+
+        /* 3. Định dạng thẻ liên kết (a) */
+        #menu a {
+            text-decoration: none;
+            color: #ffffff;
+            display: block;
+            font-size: 14px;
+        }
+
+        /* 4. Đổi màu nền khi rê chuột vào mục chọn */
+        #menu li:hover {
+            background-color: #04AA6D; /* Chuyển màu xanh khi hover */
+        }
+
+        /* 5. Cấu hình menu con (ul nằm lồng bên trong li) */
+        #menu li ul {
+            position: absolute;
+            top: 0;
+            left: 140px;          /* Đặt menu con nằm sát mép phải của menu cha */
+            visibility: hidden;   /* Ẩn danh sách con mặc định */
+            opacity: 0;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+
+        /* 6. Hiển thị menu con tương ứng khi di chuột qua menu cha */
+        #menu li:hover > ul {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li>
+                <a href="#">Khóa học &raquo;</a>
+                <!-- Menu con cấp 1 -->
+                <ul>
+                    <li><a href="#">HTML &amp; CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li>
+                        <a href="#">Lập trình Backend &raquo;</a>
+                        <!-- Menu con cấp 2 -->
+                        <ul>
+                            <li><a href="#">Python</a></li>
+                            <li><a href="#">Java</a></li>
+                            <li><a href="#">PHP</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Dịch vụ &raquo;</a>
+                <!-- Menu con cấp 1 -->
+                <ul>
+                    <li><a href="#">Thiết kế Web</a></li>
+                    <li><a href="#">Hosting / VPS</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
