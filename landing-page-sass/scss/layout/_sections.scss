@@ -1,0 +1,105 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.section {
+  @include mixins.content-container;
+  padding-block: 64px;
+
+  &__heading {
+    margin: 0 0 12px;
+    color: vars.$color-ink-dark;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__intro {
+    max-width: 680px;
+    margin: 0 auto 36px;
+    color: vars.$color-muted;
+    line-height: 1.7;
+    text-align: center;
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  @include mixins.card-surface;
+  overflow: hidden;
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+  }
+
+  &__body {
+    padding: 22px;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    color: vars.$color-ink;
+    font-size: 1.25rem;
+  }
+
+  &__text {
+    margin: 0;
+    color: vars.$color-muted;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+.stats {
+  padding: 56px 20px;
+  color: vars.$color-white;
+  background: vars.$color-stat-surface;
+
+  &__grid {
+    @include mixins.content-container;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    text-align: center;
+  }
+
+  &__item {
+    padding: 12px;
+  }
+
+  &__value {
+    display: block;
+    margin-bottom: 8px;
+    color: vars.$color-accent;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+  }
+
+  &__label {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 6px;
+  color: vars.$color-white;
+  background: vars.$color-accent;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-2px);
+    background: vars.$color-accent-hover;
+  }
+}

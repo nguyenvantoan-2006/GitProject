@@ -1,0 +1,19 @@
+@use "variables" as vars;
+
+@mixin content-container($width: vars.$content-width) {
+  width: min(100% - 40px, $width);
+  margin-inline: auto;
+}
+
+@mixin card-surface {
+  border: 1px solid vars.$color-border;
+  border-radius: vars.$radius-card;
+  background: vars.$color-white;
+  box-shadow: vars.$shadow-card;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: vars.$shadow-card-hover;
+  }
+}

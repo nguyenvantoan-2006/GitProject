@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as vars;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: vars.$font-family-base;
+  color: vars.$color-text;
+  background: vars.$color-surface;
+}
+
+a {
+  color: inherit;
+}
