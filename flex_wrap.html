@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS Flex Wrap</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 30px;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        h2 {
+            margin-bottom: 6px;
+            color: #0f172a;
+        }
+
+        p.desc {
+            margin-bottom: 15px;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .section-box {
+            background: #ffffff;
+            padding: 20px 24px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            width: 550px;
+            gap: 10px;
+            border: 2px dashed #94a3b8;
+            padding: 10px;
+            background-color: #f1f5f9;
+        }
+
+        .item {
+            width: 150px;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* 1. WRAP: Cho phép xuống dòng thông thường */
+        .case-wrap {
+            flex-wrap: wrap;
+        }
+        .case-wrap .item {
+            background-color: lightblue;
+            color: #0369a1;
+        }
+
+        /* 2. NOWRAP: Không cho xuống dòng (mặc định) */
+        .case-nowrap {
+            flex-wrap: nowrap;
+        }
+        .case-nowrap .item {
+            background-color: lightgreen;
+            color: #15803d;
+        }
+
+        /* 3. WRAP-REVERSE: Cho phép xuống dòng nhưng đảo hướng trục phụ (Cross Axis) */
+        .case-wrap-reverse {
+            flex-wrap: wrap-reverse;
+            min-height: 180px;
+        }
+        .case-wrap-reverse .item {
+            background-color: lightcoral;
+            color: #7f1d1d;
+        }
+
+        /* 4. INITIAL: Khôi phục về giá trị mặc định (nowrap) */
+        .case-initial {
+            flex-wrap: initial;
+        }
+        .case-initial .item {
+            background-color: #fef08a;
+            color: #854d0e;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. FLEX-WRAP: WRAP -->
+    <div class="section-box">
+        <h2>1. flex-wrap: wrap</h2>
+        <p class="desc">Các phần tử tự động bọc xuống dòng kế tiếp khi chiều rộng container không đủ chứa.</p>
+        <div class="container case-wrap">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+    </div>
+
+    <!-- 2. FLEX-WRAP: NOWRAP -->
+    <div class="section-box">
+        <h2>2. flex-wrap: nowrap (Mặc định)</h2>
+        <p class="desc">Tất cả phần tử ép nằm trên 1 dòng duy nhất, co lại theo flex-shrink mà không xuống dòng.</p>
+        <div class="container case-nowrap">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+    </div>
+
+    <!-- 3. FLEX-WRAP: WRAP-REVERSE -->
+    <div class="section-box">
+        <h2>3. flex-wrap: wrap-reverse</h2>
+        <p class="desc">Các phần tử bọc xuống dòng nhưng theo chiều trục dọc ngược lại từ dưới lên trên.</p>
+        <div class="container case-wrap-reverse">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+    </div>
+
+    <!-- 4. FLEX-WRAP: INITIAL -->
+    <div class="section-box">
+        <h2>4. flex-wrap: initial</h2>
+        <p class="desc">Đưa thuộc tính về giá trị mặc định của CSS (tương đương nowrap).</p>
+        <div class="container case-initial">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+    </div>
+
+</body>
+</html>
