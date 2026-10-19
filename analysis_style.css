@@ -1,0 +1,151 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Khung bao bọc toàn bộ trang */
+.page-wrapper {
+    max-width: 1050px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* 1. HEADER */
+.header {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
+/* 2. NAVIGATION MENU */
+.navbar {
+    background-color: #0f172a;
+    padding: 0 15px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.navbar li a {
+    display: block;
+    padding: 14px 18px;
+    color: #f8fafc;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.navbar li a:hover {
+    background-color: #0284c7;
+}
+
+/* 3. CONTENT SECTION (Phần thân chính) */
+.main-content {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+}
+
+/* Vùng bài viết */
+.article-area {
+    flex: 2.5;
+}
+
+.article-area h2 {
+    color: #1e3a8a;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.article-area p {
+    color: #475569;
+    margin-bottom: 15px;
+}
+
+.article-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Vùng sidebar */
+.sidebar {
+    flex: 1;
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    height: fit-content;
+}
+
+.sidebar h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #0284c7;
+    padding-bottom: 6px;
+    color: #0f172a;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #cbd5e1;
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* 4. FOOTER */
+.footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}
+
+/* Tối ưu hiển thị màn hình nhỏ */
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+}
