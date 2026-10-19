@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục Responsive với CSS Grid</title>
+    <!-- Liên kết tới file CSS -->
+    <link rel="stylesheet" href="grid_responsive_style.css">
+</head>
+<body>
+
+    <div class="grid-container">
+        <!-- 1. Header -->
+        <header class="header">
+            <h1>Cổng Thông Tin Công Nghệ &amp; Đào Tạo</h1>
+            <p>Bố cục trang web linh hoạt xây dựng hoàn toàn bằng CSS Grid</p>
+        </header>
+
+        <!-- 2. Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Khóa học</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Diễn đàn</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- 3. Sidebar (Nội dung phụ) -->
+        <aside class="sidebar">
+            <h3>Tin tức &amp; Sự kiện</h3>
+            <ul>
+                <li>Hội thảo Web Developer 2026</li>
+                <li>Lộ trình học CSS Grid chuyên sâu</li>
+                <li>Thông báo tuyển dụng lập trình viên</li>
+                <li>Cập nhật tính năng CSS mới nhất</li>
+            </ul>
+        </aside>
+
+        <!-- 4. Main Content (Nội dung chính) -->
+        <main class="main-content">
+            <h2>Bố cục Responsive với CSS Grid hiện đại</h2>
+            <p>CSS Grid là công cụ phân vùng giao diện hai chiều (2D layout) mạnh mẽ nhất trong CSS hiện nay. Khác với Flexbox chủ yếu tập trung vào một trục (hàng hoặc cột), CSS Grid cho phép chúng ta kiểm soát đồng thời cả hàng ngang và cột dọc thông qua thuộc tính <code>grid-template-areas</code>.</p>
+            <p>Trên màn hình máy tính (Desktop), bố cục tự động trải rộng với Header và Navigation nằm trên đỉnh, phần thân tách làm 2 cột gồm Sidebar cố định 240px và Main Content co giãn chiếm trọn không gian còn lại (1fr), kết thúc bằng Footer ôm sát đáy trang.</p>
+            <p>Khi chuyển sang thiết bị di động (Mobile có chiều rộng &le; 768px), Media Query sẽ tái cấu trúc lưới thành một cột dọc duy nhất (1fr), đảm bảo các thành phần hiển thị tuần tự gọn gàng mà không bao giờ bị tràn màn hình.</p>
+        </main>
+
+        <!-- 5. Footer -->
+        <footer class="footer">
+            &copy; 2026 Bản quyền thuộc về Web Developer Practice. Thiết kế chuẩn CSS Grid Responsive.
+        </footer>
+    </div>
+
+</body>
+</html>
