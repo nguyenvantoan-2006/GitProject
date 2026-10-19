@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành tạo layout với RWD</title>
+    <!-- Liên kết tới file CSS -->
+    <link rel="stylesheet" href="rwd_style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- 1. Header -->
+        <div class="header">
+            <h1>TRANG TIN TỨC ĐA PHƯƠNG TIỆN</h1>
+            <p>Bố cục Responsive Web Design thích ứng mọi thiết bị</p>
+        </div>
+
+        <!-- 2. Menu điều hướng -->
+        <div class="nav">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+
+        <!-- 3. Khung phân vùng nội dung chính -->
+        <div class="main-container">
+            <!-- Sidebar Trái -->
+            <div class="sidebar-left">
+                <h3>Danh mục tin</h3>
+                <ul>
+                    <li><a href="#">Công nghệ mới</a></li>
+                    <li><a href="#">Lập trình Web</a></li>
+                    <li><a href="#">Trí tuệ nhân tạo</a></li>
+                    <li><a href="#">Đời sống số</a></li>
+                </ul>
+            </div>
+
+            <!-- Content Ở Giữa -->
+            <div class="content">
+                <h2>Ứng dụng Responsive Web Design (RWD)</h2>
+                <p>Responsive Web Design là kỹ thuật thiết kế giao diện giúp trang web tự động điều chỉnh và hiển thị tối ưu trên tất cả các loại thiết bị từ màn hình máy tính lớn, laptop đến máy tính bảng và điện thoại di động.</p>
+                <p>Sử dụng thẻ meta viewport kết hợp với CSS Flexbox và Media Queries (@media) cho phép các khối nội dung tự động dàn hàng ngang khi màn hình rộng và xếp chồng theo chiều dọc khi màn hình thu hẹp, tránh tình trạng bị vỡ khung hay xuất hiện thanh cuộn ngang khó chịu.</p>
+            </div>
+
+            <!-- Sidebar Phải -->
+            <div class="sidebar-right">
+                <h3>Tin nổi bật</h3>
+                <p style="font-size: 13px; color: #64748b; line-height: 1.5;">Khu vực hiển thị thông báo, sự kiện mới hoặc tiện ích tra cứu nhanh.</p>
+            </div>
+        </div>
+
+        <!-- 4. Footer -->
+        <div class="footer">
+            &copy; 2026 Bản quyền thuộc về Web Developer Practice. Thiết kế chuẩn RWD.
+        </div>
+    </div>
+
+</body>
+</html>
