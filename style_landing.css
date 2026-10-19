@@ -1,0 +1,191 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+/* 1. Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e293b;
+    padding: 15px 30px;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #38bdf8;
+    letter-spacing: 0.5px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav ul li a:hover {
+    color: #38bdf8;
+}
+
+/* 2. Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+}
+
+.hero h1 {
+    font-size: 38px;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #475569;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0284c7;
+    color: #ffffff;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+    background-color: #0369a1;
+    transform: translateY(-2px);
+}
+
+/* 3. Services Section (Flexbox) */
+.services {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.services h2 {
+    font-size: 28px;
+    color: #1e293b;
+    margin-bottom: 35px;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.service {
+    flex: 1;
+    min-width: 260px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 30px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f172a;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+/* 4. Testimonials Section */
+.testimonials {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f1f5f9;
+}
+
+.testimonials h2 {
+    font-size: 28px;
+    color: #1e293b;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    max-width: 650px;
+    margin: 15px auto;
+    background-color: #ffffff;
+    padding: 18px 24px;
+    border-radius: 6px;
+    font-style: italic;
+    color: #334155;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* 5. Footer */
+.footer {
+    text-align: center;
+    padding: 24px;
+    background-color: #1e293b;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* 6. Media Queries: Tối ưu cho Mobile (<= 768px) */
+@media (max-width: 768px) {
+    .nav ul {
+        display: none; /* Ẩn menu ngang trên mobile */
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .services,
+    .testimonials {
+        padding: 40px 15px;
+    }
+}
