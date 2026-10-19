@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành tạo bố cục cơ bản</title>
+    <style>
+        /* 1. Thiết lập chung: Cố định phông chữ cho toàn trang */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e5e7eb;
+            color: #1f2937;
+        }
+
+        /* Khung bao toàn bộ nội dung, cố định độ rộng và căn giữa màn hình */
+        #main {
+            width: 960px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 10px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 2. Phân vùng Head (Banner / Logo) */
+        #head {
+            height: 100px;
+            background-color: #3b82f6;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        /* 3. Phân vùng Head-link (Menu liên kết ngang đầu trang) */
+        #head-link {
+            height: 40px;
+            line-height: 40px;
+            background-color: #1e293b;
+            color: #ffffff;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            padding: 0 15px;
+        }
+
+        #head-link ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        #head-link a {
+            color: #f8fafc;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        #head-link a:hover {
+            color: #38bdf8;
+        }
+
+        /* Khung bọc 3 cột (Left - Content - Right) để dễ xử lý float */
+        .content-wrapper {
+            margin-bottom: 10px;
+        }
+
+        /* Kỹ thuật Clearfix chống vỡ bố cục khi các cột con dùng float */
+        .content-wrapper::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* 4. Phân vùng Left: Chiếm 180px, dạt sang trái */
+        #left {
+            width: 180px;
+            min-height: 420px;
+            background-color: #f1f5f9;
+            float: left;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+        }
+
+        #left h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #0f172a;
+            border-bottom: 2px solid #94a3b8;
+            padding-bottom: 4px;
+        }
+
+        #left ul {
+            list-style: none;
+        }
+
+        #left li {
+            padding: 6px 0;
+            font-size: 14px;
+            border-bottom: 1px dashed #cbd5e1;
+        }
+
+        /* 5. Phân vùng Content chính ở giữa: Chiếm 560px, dạt sang trái cạnh #left */
+        #content {
+            width: 560px;
+            min-height: 420px;
+            background-color: #ffffff;
+            float: left;
+            margin: 0 10px;
+            padding: 15px 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+        }
+
+        #content h2 {
+            font-size: 20px;
+            color: #1e3a8a;
+            margin-bottom: 12px;
+        }
+
+        #content p {
+            line-height: 1.6;
+            margin-bottom: 14px;
+            color: #475569;
+            font-size: 14px;
+        }
+
+        /* 6. Phân vùng Right: Chiếm 180px, dạt sang phải */
+        #right {
+            width: 180px;
+            min-height: 420px;
+            background-color: #f1f5f9;
+            float: right;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+        }
+
+        #right h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #0f172a;
+            border-bottom: 2px solid #94a3b8;
+            padding-bottom: 4px;
+        }
+
+        /* 7. Phân vùng Footer (Cuối trang) */
+        #footer {
+            height: 60px;
+            background-color: #334155;
+            color: #ffffff;
+            text-align: center;
+            line-height: 60px;
+            font-size: 14px;
+            border-radius: 4px;
+            clear: both; /* Triệt tiêu dòng chảy float đảm bảo luôn nằm dưới cùng */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Phân vùng chứa toàn bộ nội dung của trang -->
+    <div id="main">
+
+        <!-- 1. Phân vùng Head -->
+        <div id="head">
+            BANNER &amp; LOGO CÔNG TY
+        </div>
+
+        <!-- 2. Phân vùng Head-link -->
+        <div id="head-link">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Students</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Khung chứa 3 phân vùng giữa -->
+        <div class="content-wrapper">
+            <!-- 3. Phân vùng Left -->
+            <div id="left">
+                <h3>Danh mục trái</h3>
+                <ul>
+                    <li>Liên kết 1</li>
+                    <li>Liên kết 2</li>
+                    <li>Liên kết 3</li>
+                    <li>Liên kết 4</li>
+                </ul>
+            </div>
+
+            <!-- 4. Phân vùng Content chính -->
+            <div id="content">
+                <h2>Nội dung chính (Main Content)</h2>
+                <p>Đây là khu vực nội dung chính của website, dùng để trình bày các bài viết, tin tức nổi bật hoặc bảng dữ liệu chi tiết.</p>
+                <p>Bố cục được xây dựng chuẩn xác bằng cách sử dụng các thẻ <code>&lt;div&gt;</code> định danh bằng ID kết hợp các thuộc tính CSS như <code>width</code>, <code>margin</code>, <code>padding</code>, <code>float: left</code>, <code>float: right</code> và <code>clear: both</code>.</p>
+            </div>
+
+            <!-- 5. Phân vùng Right -->
+            <div id="right">
+                <h3>Thông tin phải</h3>
+                <p style="font-size: 13px; color: #64748b; line-height: 1.5;">Khu vực đặt lịch biểu, thông báo ngắn hoặc bản đồ liên hệ.</p>
+            </div>
+        </div>
+
+        <!-- 6. Phân vùng Footer -->
+        <div id="footer">
+            &copy; 2026 Bản quyền thuộc về Hệ thống Thực hành Layout Website
+        </div>
+
+    </div>
+
+</body>
+</html>
