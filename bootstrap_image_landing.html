@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page với Bootstrap và Hình Ảnh</title>
+    <!-- Nhúng Bootstrap 5 CSS qua CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Tùy chỉnh nhẹ cho banner hero-section */
+        .hero-banner {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), 
+                        url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+
+    <!-- 1. BANNER / HERO SECTION (Thay thế Jumbotron trong Bootstrap 5) -->
+    <header class="hero-banner text-white text-center py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">Kiến Tạo Tương Lai Cùng Công Nghệ Số</h1>
+                    <p class="lead mb-4 text-light">
+                        Chúng tôi cung cấp hệ sinh thái giải pháp số toàn diện, giúp doanh nghiệp bứt phá năng suất và tối ưu hóa vận hành trong kỷ nguyên 4.0.
+                    </p>
+                    <a href="#cta" class="btn btn-primary btn-lg px-4 shadow-sm fw-semibold">Khám Phá Ngay</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. PHẦN GIỚI THIỆU (Row chứa Hình ảnh + Nội dung) -->
+    <section class="py-5 bg-white">
+        <div class="container py-3">
+            <div class="row align-items-center g-5">
+                <div class="col-12 col-md-6">
+                    <!-- Ảnh áp dụng img-fluid và bo góc rounded-3 -->
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" 
+                         alt="Đội ngũ làm việc chuyên nghiệp" 
+                         class="img-fluid rounded-3 shadow">
+                </div>
+                <div class="col-12 col-md-6">
+                    <span class="badge bg-primary-subtle text-primary mb-2 px-3 py-2 fs-6">Về Chúng Tôi</span>
+                    <h2 class="fw-bold mb-3 text-dark">Đồng Hành Cùng Thành Công Của Bạn</h2>
+                    <p class="text-secondary leading-relaxed">
+                        Với hơn 10 năm kinh nghiệm trong lĩnh vực chuyển đổi số và phát triển phần mềm, chúng tôi thấu hiểu những thách thức mà doanh nghiệp đối mặt hàng ngày.
+                    </p>
+                    <p class="text-secondary mb-4">
+                        Tất cả các sản phẩm được thiết kế với chuẩn mực quốc tế, giao diện thân thiện, tương thích tối ưu trên mọi màn hình máy tính và thiết bị di động.
+                    </p>
+                    <a href="#features" class="btn btn-outline-primary fw-medium">Xem các tính năng</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. DANH SÁCH TÍNH NĂNG (Row gồm 4 cột) -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark">Tính Năng Nổi Bật</h2>
+                <p class="text-muted">Các giá trị vượt trội chúng tôi mang đến cho khách hàng</p>
+            </div>
+            <div class="row g-4 text-center">
+                <!-- Tính năng 1 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 p-4 border-0 shadow-sm rounded-3">
+                        <div class="fs-1 mb-2 text-primary">⚡</div>
+                        <h3 class="h5 fw-bold mb-2">Tốc Độ Vượt Trội</h3>
+                        <p class="text-muted small mb-0">Hệ thống tối ưu hóa hiệu năng cao, giảm thiểu thời gian chờ đợi.</p>
+                    </div>
+                </div>
+                <!-- Tính năng 2 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 p-4 border-0 shadow-sm rounded-3">
+                        <div class="fs-1 mb-2 text-primary">🔒</div>
+                        <h3 class="h5 fw-bold mb-2">Bảo Mật Tuyệt Đối</h3>
+                        <p class="text-muted small mb-0">Chuẩn mã hóa đa tầng bảo vệ dữ liệu doanh nghiệp an toàn 24/7.</p>
+                    </div>
+                </div>
+                <!-- Tính năng 3 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 p-4 border-0 shadow-sm rounded-3">
+                        <div class="fs-1 mb-2 text-primary">📱</div>
+                        <h3 class="h5 fw-bold mb-2">Chuẩn Responsive</h3>
+                        <p class="text-muted small mb-0">Hiển thị sắc nét và mượt mà trên cả desktop, tablet và mobile.</p>
+                    </div>
+                </div>
+                <!-- Tính năng 4 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 p-4 border-0 shadow-sm rounded-3">
+                        <div class="fs-1 mb-2 text-primary">🎧</div>
+                        <h3 class="h5 fw-bold mb-2">Hỗ Trợ Tận Tâm</h3>
+                        <p class="text-muted small mb-0">Đội ngũ chuyên gia kỹ thuật sẵn sàng hỗ trợ mọi lúc, mọi nơi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. NÚT KÊU GỌI HÀNH ĐỘNG (CTA SECTION) -->
+    <section id="cta" class="py-5 bg-primary text-white text-center">
+        <div class="container py-4">
+            <h2 class="display-6 fw-bold mb-3">Sẵn Sàng Tăng Tốc Doanh Nghiệp?</h2>
+            <p class="lead mb-4 text-white-50">Đăng ký trải nghiệm miễn phí 30 ngày ngay hôm nay. Không cần thẻ tín dụng.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="#" class="btn btn-light btn-lg px-4 text-primary fw-bold shadow">Đăng Ký Ngay</a>
+                <a href="#" class="btn btn-outline-light btn-lg px-4 fw-medium">Liên Hệ Tư Vấn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0 text-secondary small">&copy; 2026 TechBrand Solutions. All rights reserved. Xây dựng bằng Bootstrap 5.</p>
+        </div>
+    </footer>
+
+    <!-- Nhúng Bootstrap 5 JS Bundle qua CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
