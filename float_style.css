@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f8fafc;
+}
+
+/* Khung bao bọc toàn bộ bố cục */
+.container {
+    width: 100%;
+}
+
+/* Cột bên trái: Chiếm 60%, dạt sang trái */
+.left-column {
+    width: 60%;
+    float: left;
+    background-color: lightblue;
+    padding: 20px;
+    min-height: 150px;
+    border-radius: 4px;
+}
+
+/* Cột bên phải: Chiếm 38%, dạt sang phải */
+.right-column {
+    width: 38%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+    min-height: 150px;
+    border-radius: 4px;
+}
+
+/* Kỹ thuật Clearfix xử lý tràn phần tử chứa khi dùng float */
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
