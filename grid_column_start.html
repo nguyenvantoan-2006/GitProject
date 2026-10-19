@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS Grid Column Start</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 30px;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        h2 {
+            margin-bottom: 6px;
+            color: #0f172a;
+        }
+
+        p.desc {
+            margin-bottom: 15px;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .section-box {
+            background: #ffffff;
+            padding: 20px 24px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .grid-item {
+            background-color: #e2e8f0;
+            padding: 16px;
+            text-align: center;
+            font-weight: bold;
+            color: #334155;
+            border-radius: 4px;
+        }
+
+        /* 1. Ví dụ AUTO */
+        .grid-auto {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            gap: 10px;
+        }
+
+        .grid-auto .item1 {
+            grid-column-start: auto;
+            background-color: #38bdf8;
+            color: #0c4a6e;
+        }
+
+        /* 2. Ví dụ SPAN N */
+        .grid-span {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .grid-span .item1 {
+            grid-column-start: span 2;
+            background-color: #4ade80;
+            color: #064e3b;
+        }
+
+        /* 3. Ví dụ COLUMN-LINE */
+        .grid-line {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .grid-line .item1 {
+            grid-column-start: 2;
+            background-color: #fb923c;
+            color: #7c2d12;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. VÍ DỤ AUTO -->
+    <div class="section-box">
+        <h2>1. Giá trị auto</h2>
+        <p class="desc">Cấu hình: <code>grid-column-start: auto;</code> (Xếp theo luồng mặc định của Grid)</p>
+        <div class="grid-auto">
+            <div class="grid-item item1">Item 1 (auto)</div>
+            <div class="grid-item">Item 2</div>
+            <div class="grid-item">Item 3</div>
+        </div>
+    </div>
+
+    <!-- 2. VÍ DỤ SPAN N -->
+    <div class="section-box">
+        <h2>2. Giá trị span n</h2>
+        <p class="desc">Cấu hình: <code>grid-column-start: span 2;</code> (Kéo dài chiếm 2 cột)</p>
+        <div class="grid-span">
+            <div class="grid-item item1">Item 1 (span 2 cột)</div>
+            <div class="grid-item">Item 2</div>
+            <div class="grid-item">Item 3</div>
+            <div class="grid-item">Item 4</div>
+        </div>
+    </div>
+
+    <!-- 3. VÍ DỤ COLUMN-LINE -->
+    <div class="section-box">
+        <h2>3. Giá trị column-line cụ thể</h2>
+        <p class="desc">Cấu hình: <code>grid-column-start: 2;</code> (Bắt đầu tại đường kẻ cột số 2, để trống cột 1)</p>
+        <div class="grid-line">
+            <div class="grid-item item1">Item 1 (bắt đầu từ line 2)</div>
+            <div class="grid-item">Item 2</div>
+            <div class="grid-item">Item 3</div>
+            <div class="grid-item">Item 4</div>
+        </div>
+    </div>
+
+</body>
+</html>
