@@ -1,0 +1,100 @@
+:root {
+  --ink: #22312c;
+  --muted: #6d7770;
+  --paper: #f8f7f2;
+  --cream: #eeece3;
+  --terracotta: #b95f45;
+  --terracotta-dark: #9f4b34;
+  --sage: #dfe7dc;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: "DM Sans", sans-serif; }
+h1, h2, h3, .brand { font-family: "Playfair Display", Georgia, serif; }
+.site-nav { background: rgba(248, 247, 242, .96); border-bottom: 1px solid rgba(34, 49, 44, .08); backdrop-filter: blur(12px); }
+.brand { color: var(--ink); font-size: 1.45rem; font-weight: 700; letter-spacing: -.06em; text-decoration: none; }
+.brand span { color: var(--terracotta); }
+.site-nav .nav-link { color: var(--ink); font-size: .92rem; }
+.site-nav .nav-link:hover { color: var(--terracotta); }
+.btn-ink, .btn-terracotta, .btn-outline-ink { border-radius: 999px; padding: .75rem 1.35rem; font-weight: 600; }
+.btn-ink { color: white; background: var(--ink); }
+.btn-ink:hover { color: white; background: #33483f; }
+.btn-terracotta { color: white; background: var(--terracotta); border-color: var(--terracotta); }
+.btn-terracotta:hover { color: white; background: var(--terracotta-dark); border-color: var(--terracotta-dark); }
+.btn-outline-ink { color: var(--ink); border: 1px solid var(--ink); }
+.btn-outline-ink:hover { color: white; background: var(--ink); }
+.hero { overflow: hidden; padding: 5.5rem 0 6rem; background: radial-gradient(circle at 80% 45%, #e6e8dc 0, transparent 32%), var(--paper); }
+.eyebrow { margin-bottom: 1rem; color: var(--terracotta); font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.hero h1 { margin: 0 0 1.4rem; font-size: clamp(3.2rem, 6vw, 5.25rem); line-height: 1.03; letter-spacing: -.055em; }
+.hero h1 em, .section-title em { color: var(--terracotta); font-weight: 500; }
+.hero-lead { max-width: 490px; margin-bottom: 1.8rem; color: var(--muted); font-size: 1.08rem; line-height: 1.8; }
+.hero-note { color: var(--muted); font-size: .82rem; }
+.book-stage { position: relative; display: grid; min-height: 430px; width: 100%; place-items: center; }
+.book-cover { position: relative; width: 260px; height: 370px; overflow: hidden; color: #f8f1dc; background: linear-gradient(145deg, #344d47, #1d302d 65%, #182825); box-shadow: 24px 25px 40px rgba(23, 37, 32, .25), inset 7px 0 9px rgba(255,255,255,.08); transform: rotate(-4deg); }
+.book-cover::before { position: absolute; inset: 0 auto 0 0; width: 12px; content: ""; background: linear-gradient(90deg, rgba(0,0,0,.32), rgba(255,255,255,.08)); }
+.cover-sun { position: absolute; top: 46px; right: 35px; width: 92px; height: 92px; border-radius: 50%; background: #d59068; }
+.cover-lines { position: absolute; top: 83px; right: -35px; width: 225px; height: 225px; border: 1px solid rgba(240,226,188,.45); border-radius: 50%; box-shadow: 0 0 0 20px rgba(240,226,188,.04), 0 0 0 42px rgba(240,226,188,.04); }
+.cover-copy { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 45px 18px 34px; text-align: center; }
+.cover-copy span, .cover-copy small { position: relative; font-family: "DM Sans", sans-serif; font-size: .56rem; letter-spacing: .2em; }
+.cover-copy strong { position: relative; margin-top: 30px; font-family: "Playfair Display", Georgia, serif; font-size: 2.45rem; font-weight: 500; line-height: .98; letter-spacing: .06em; }
+.stage-caption { position: absolute; right: 4%; bottom: 18px; color: var(--muted); font-family: "Playfair Display", Georgia, serif; font-size: .9rem; font-style: italic; }
+.section-pad { padding: 6rem 0; }
+.book-overview { background: white; }
+.section-title { margin-bottom: 1rem; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; letter-spacing: -.035em; }
+.section-lead { max-width: 700px; color: var(--muted); font-size: 1.02rem; line-height: 1.85; }
+.overview-point { height: 100%; padding: 1.5rem; border-top: 1px solid #d8d9d0; }
+.overview-point span { color: var(--terracotta); font-size: .72rem; font-weight: 700; letter-spacing: .12em; }
+.overview-point h3 { margin: .75rem 0 .5rem; font-size: 1.5rem; }
+.overview-point p { margin: 0; color: var(--muted); line-height: 1.7; }
+.author { background: var(--sage); }
+.author-photo { display: block; width: min(100%, 390px); aspect-ratio: 4 / 5; margin: auto; border-radius: 48% 48% 8px 8px; object-fit: cover; object-position: center 35%; filter: saturate(.78); }
+.author-copy { max-width: 590px; }
+.author-copy p:not(.eyebrow) { color: #4e5c55; line-height: 1.85; }
+.text-link { display: inline-block; margin-top: .7rem; color: var(--terracotta-dark); font-weight: 700; text-decoration: none; }
+.features { background: var(--paper); }
+.feature-card { height: 100%; padding: 1.55rem; border: 1px solid #e7e5dc; border-radius: 12px; background: rgba(255,255,255,.56); }
+.feature-icon { display: inline-grid; width: 42px; height: 42px; margin-bottom: 1.1rem; color: var(--terracotta); border-radius: 50%; background: #f0e4d9; font-size: 1.35rem; place-items: center; }
+.feature-card h3 { margin-bottom: .55rem; font-size: 1.2rem; }
+.feature-card p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.65; }
+.prices { background: var(--cream); }
+.price-card { height: 100%; padding: 2rem; border: 1px solid #d9d7cd; border-radius: 14px; background: white; }
+.price-card-featured { border: 2px solid var(--terracotta); box-shadow: 0 14px 30px rgba(112, 72, 52, .1); }
+.price-format { color: var(--terracotta); font-size: .68rem; font-weight: 700; letter-spacing: .16em; }
+.price-card h3 { margin: .4rem 0; font-size: 1.65rem; }
+.price { margin: 1rem 0; font-family: "Playfair Display", Georgia, serif; font-size: 2.5rem; }
+.price span { margin-left: .35rem; font-family: "DM Sans", sans-serif; font-size: 1rem; }
+.price-card ul { min-height: 120px; margin: 0 0 1.3rem; padding-left: 1.15rem; color: var(--muted); line-height: 2; }
+.price-note { color: var(--muted); font-size: .82rem; }
+.download { color: white; background: #263b35; }
+.download .section-title { color: white; }
+.download .section-lead { color: #d0d9d2; }
+.reader-say { background: white; }
+.quote-card { height: 100%; margin: 0; padding: 1.6rem; border: 1px solid #e9e7df; border-radius: 12px; background: var(--paper); }
+.stars { margin-bottom: 1rem; color: #bd774a; letter-spacing: .12em; }
+.quote-card blockquote { min-height: 112px; margin: 0 0 1.2rem; font-family: "Playfair Display", Georgia, serif; font-size: 1.15rem; line-height: 1.55; }
+.quote-card figcaption { font-size: .88rem; font-weight: 700; }
+.quote-card figcaption span { color: var(--muted); font-weight: 400; }
+.site-footer { padding: 1.7rem 0; color: #d8ded9; background: #1c2b27; font-size: .82rem; }
+.brand-footer { color: white; }
+.footer-top { color: #d8ded9; text-decoration: none; }
+.footer-top:hover { color: white; }
+
+@media (max-width: 767.98px) {
+  .hero { padding: 4rem 0 3rem; }
+  .hero-copy { text-align: center; }
+  .hero-lead { margin-inline: auto; }
+  .hero-copy .d-flex { justify-content: center; }
+  .book-stage { min-height: 390px; }
+  .section-pad { padding: 4.25rem 0; }
+  .stage-caption { right: 10%; bottom: 0; }
+  .quote-card blockquote { min-height: auto; }
+}
+
+@media (max-width: 575.98px) {
+  .hero h1 { font-size: 3rem; }
+  .book-cover { width: 224px; height: 320px; }
+  .cover-copy strong { font-size: 2.1rem; }
+  .stage-caption { right: 0; left: 0; text-align: center; }
+  .section-pad { padding: 3.5rem 0; }
+}
