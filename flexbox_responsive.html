@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục Responsive với CSS Flexbox</title>
+    <!-- Liên kết file CSS -->
+    <link rel="stylesheet" href="style_flexbox_responsive.css">
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <!-- 1. Header -->
+        <header class="header">
+            <h1>Cổng Thông Tin Công Nghệ &amp; Thiết Kế Web</h1>
+            <p>Bố cục Responsive linh hoạt xây dựng hoàn toàn bằng CSS Flexbox</p>
+        </header>
+
+        <!-- 2. Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Khóa học</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Diễn đàn</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Khung thân chính bọc Main Content và Sidebar -->
+        <div class="main-wrapper">
+            <!-- 3. Sidebar (Nội dung phụ) -->
+            <aside class="sidebar">
+                <h3>Tin tức &amp; Sự kiện</h3>
+                <ul>
+                    <li>Lộ trình làm chủ Flexbox 2026</li>
+                    <li>Kỹ thuật dàn trang Responsive hiện đại</li>
+                    <li>Tuyển dụng lập trình viên Frontend</li>
+                    <li>Thảo luận cấu trúc Semantic HTML</li>
+                </ul>
+            </aside>
+
+            <!-- 4. Main Content (Nội dung chính) -->
+            <main class="main-content">
+                <h2>Ứng dụng CSS Flexbox trong thiết kế bố cục Responsive</h2>
+                <p>CSS Flexbox (Flexible Box) là mô hình bố cục 1 chiều cực kỳ mạnh mẽ, cho phép căn chỉnh khoảng cách và phân bổ không gian giữa các phần tử con trong một container ngay cả khi kích thước của chúng chưa xác định hoặc thay đổi linh hoạt.</p>
+                <p>Trong bài tập này, toàn bộ trang web được bọc bởi khung <code>.page-wrapper</code> có <code>display: flex</code> và <code>flex-direction: column</code>. Khu vực thân giữa sử dụng <code>.main-wrapper</code> với <code>display: flex</code>, trong đó Sidebar chiếm tỷ lệ <code>flex: 1</code> và Main Content chiếm <code>flex: 3</code>.</p>
+                <p>Khi hiển thị trên các màn hình nhỏ (Mobile &le; 768px), thuộc tính <code>flex-direction: column</code> trong Media Query sẽ tự động chuyển toàn bộ các khối sang dạng xếp chồng dọc gọn gàng, kết hợp thuộc tính <code>order</code> để tối ưu trải nghiệm đọc cho người dùng.</p>
+            </main>
+        </div>
+
+        <!-- 5. Footer -->
+        <footer class="footer">
+            &copy; 2026 Bản quyền thuộc về Web Developer Practice. Thiết kế chuẩn CSS Flexbox Responsive.
+        </footer>
+    </div>
+
+</body>
+</html>

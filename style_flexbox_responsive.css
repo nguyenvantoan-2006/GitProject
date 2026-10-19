@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 16px;
+}
+
+/* 1. KHUNG CONTAINER CHÍNH (Xếp tầng dọc toàn trang) */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 1200px;
+    min-height: calc(100vh - 32px);
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 24px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.header h1 {
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #0f172a;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #f8fafc;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.navbar a:hover {
+    background-color: #0284c7;
+}
+
+/* 2. KHU VỰC THÂN CHÍNH: DÀN HÀNG NGANG BẰNG FLEXBOX */
+.main-wrapper {
+    display: flex;
+    gap: 16px;
+    flex: 1; /* Tự động dãn chiếm trọn chiều cao còn lại */
+}
+
+/* Sidebar (Nội dung phụ): flex: 1 (khoảng 25% độ rộng) */
+.sidebar {
+    flex: 1;
+    min-width: 240px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar h3 {
+    color: #0f172a;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #0284c7;
+    padding-bottom: 6px;
+    font-size: 17px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #cbd5e1;
+    font-size: 14px;
+    color: #475569;
+}
+
+/* Main Content (Nội dung chính): flex: 3 (khoảng 75% độ rộng) */
+.main-content {
+    flex: 3;
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.main-content h2 {
+    color: #1e3a8a;
+    margin-bottom: 14px;
+}
+
+.main-content p {
+    line-height: 1.7;
+    margin-bottom: 14px;
+    color: #334155;
+    font-size: 15px;
+}
+
+/* Footer */
+.footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* ================= 3. RESPONSIVE CHO MOBILE (<= 768px) ================= */
+@media screen and (max-width: 768px) {
+    /* Chuyển thân chính sang xếp chồng theo chiều dọc */
+    .main-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        min-width: 100%;
+        order: 2; /* Đưa sidebar xuống dưới nội dung chính */
+    }
+
+    .main-content {
+        order: 1; /* Ưu tiên nội dung chính hiển thị trước */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+}
